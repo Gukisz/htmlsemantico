@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Creepster', cursive;
+    background: #000;
+    color: #c00;
+    padding: 20px;
+}
+
+.planta-casa {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 150px 150px;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.comodo {
+    background: #222;
+    border: 3px solid #500;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.comodo h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.objeto {
+    position: absolute;
+    font-size: 1.8rem;
+}
+
+.entrada {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+
+.corredor {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+
+.sala {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.cozinha {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.quarto {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.banheiro {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.entrada .objeto { bottom: 10px; right: 20px; }
+.corredor .objeto { bottom: 10px; left: 20px; }
+.sala .objeto { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.cozinha .objeto { bottom: 10px; right: 10px; }
+.quarto .objeto { top: 20px; right: 20px; }
+.banheiro .objeto { bottom: 10px; left: 10px; }
+
+.comodo {
+    box-shadow: 0 0 10px #f003;
+}
+
+.comodo:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s;
+}
